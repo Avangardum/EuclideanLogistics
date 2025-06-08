@@ -29,10 +29,10 @@ import kotlin.time.Duration.Companion.seconds
  *
  * An example for blocks is in the `blocks` package of this mod.
  */
-@Mod(ExampleMod.ID)
+@Mod(EuclideanLogisticsMod.ID)
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-object ExampleMod {
-    const val ID = "examplemod"
+object EuclideanLogisticsMod {
+    const val ID = "euclideanlogistics"
 
     // the logger for our mod
     val LOGGER: Logger = LogManager.getLogger(ID)
