@@ -1,6 +1,6 @@
-package example.examplemod
+package net.avangardum.euclideanlogistics
 
-import example.examplemod.block.ModBlocks
+import net.avangardum.euclideanlogistics.block.ModBlocks
 import net.neoforged.fml.common.Mod
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger

@@ -1,6 +1,6 @@
-package example.examplemod.block
+package net.avangardum.euclideanlogistics.block
 
-import example.examplemod.EuclideanLogisticsMod
+import net.avangardum.euclideanlogistics.EuclideanLogisticsMod
 import net.neoforged.neoforge.registries.DeferredRegister
 
 // THIS LINE IS REQUIRED FOR USING PROPERTY DELEGATES
