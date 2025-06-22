@@ -14,7 +14,7 @@ public abstract class MixinGui {
     @Unique private static final int BOTTOM_GUI_Y_OFFSET = 22;
 
     @Inject(method = "renderItemHotbar", at = @At("HEAD"), cancellable = true)
-    public void onRenderItemHotbar(GuiGraphics guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
+    public void cancelHotbarRendering(GuiGraphics guiGraphics, DeltaTracker deltaTracker, CallbackInfo ci) {
         ci.cancel();
     }
 
