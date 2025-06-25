@@ -3,7 +3,8 @@
   "package": "net.avangardum.euclideanlogistics.mixins",
   "mixins": [
     "MixinGui",
-      "MixinInventory"
+    "MixinInventory",
+    "MixinMinecraft"
   ],
   "injectors": {
     "defaultRequire": 1
