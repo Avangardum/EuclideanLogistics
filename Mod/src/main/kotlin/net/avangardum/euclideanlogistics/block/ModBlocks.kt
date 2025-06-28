@@ -7,5 +7,5 @@ import net.neoforged.neoforge.registries.DeferredRegister
 import thedarkcolour.kotlinforforge.neoforge.forge.getValue
 
 object ModBlocks {
-    val REGISTRY = DeferredRegister.createBlocks(EuclideanLogisticsMod.ID)
+    val REGISTRY: DeferredRegister.Blocks = DeferredRegister.createBlocks(EuclideanLogisticsMod.ID)
 }

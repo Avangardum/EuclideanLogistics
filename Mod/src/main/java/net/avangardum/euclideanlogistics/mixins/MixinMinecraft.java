@@ -37,12 +37,16 @@ public abstract class MixinMinecraft {
         "startDestroyBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z";
 
     @Redirect(method = "startAttack", at = @At(value = "INVOKE", target = START_DESTROY_BLOCK_DESCRIPTOR))
-    private boolean startDestroyBlockWrapper(MultiPlayerGameMode gameMode, BlockPos blockPos, Direction face) {
+    private boolean startDestroyBlockOnStartAttackWrapper(
+        @NotNull MultiPlayerGameMode gameMode,
+        @NotNull BlockPos blockPos,
+        @NotNull Direction directionFacing
+    ) {
         if (isDiggingDisabledBecauseHoldingBlock()) {
             onAttackMiss();
             return false;
         }
-        return gameMode.startDestroyBlock(blockPos, face);
+        return gameMode.startDestroyBlock(blockPos, directionFacing);
     }
 
     @Unique
@@ -69,8 +73,12 @@ public abstract class MixinMinecraft {
         "continueDestroyBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/Direction;)Z";
 
     @Redirect(method = "continueAttack", at = @At(value = "INVOKE", target = CONTINUE_DESTROY_BLOCK_DESCRIPTOR))
-    private boolean continueDestroyBlockWrapper(MultiPlayerGameMode gameMode, BlockPos blockPos, Direction face) {
+    private boolean continueDestroyBlockOnContinueAttackWrapper(
+        @NotNull MultiPlayerGameMode gameMode,
+        @NotNull BlockPos blockPos,
+        @NotNull Direction directionFacing
+    ) {
         if (isDiggingDisabledBecauseHoldingBlock()) return false;
-        return gameMode.continueDestroyBlock(blockPos, face);
+        return gameMode.continueDestroyBlock(blockPos, directionFacing);
     }
 }

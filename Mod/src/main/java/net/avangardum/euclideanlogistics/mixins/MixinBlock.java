@@ -1,6 +1,6 @@
 package net.avangardum.euclideanlogistics.mixins;
 
-import net.avangardum.euclideanlogistics.ElDomain;
+import net.avangardum.euclideanlogistics.EuclideanLogisticsDomain;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -11,12 +11,11 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-
-import javax.annotation.Nullable;
 
 @Mixin(Block.class)
 public abstract class MixinBlock extends BlockBehaviour {
@@ -40,6 +39,12 @@ public abstract class MixinBlock extends BlockBehaviour {
         @NotNull Entity player,
         @NotNull ItemStack tool
     ) {
-        ElDomain.INSTANCE.onPlayerDestroyedBlock(blockState, level, blockPos, blockEntity, (Player) player);
+        EuclideanLogisticsDomain.INSTANCE.onPlayerDestroyedBlock(
+            blockState,
+            level,
+            blockPos,
+            blockEntity,
+            (Player) player
+        );
     }
 }
