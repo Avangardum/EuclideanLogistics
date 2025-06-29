@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2025 Euclidean Logistics contributors. Licensed under GNU AGPL v3. See License.md.
+ */
+
 package net.avangardum.euclideanlogistics.mixins;
 
 import net.avangardum.euclideanlogistics.EuclideanLogisticsDomain;
