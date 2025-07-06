@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Inspections/General/Annotator" pattern="file:*.*&amp;&amp;!file:resources/META-INF/neoforge.mods.toml" />
+</component>

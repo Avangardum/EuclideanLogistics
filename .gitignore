@@ -15,6 +15,7 @@ out
 !.idea/inspectionProfiles
 !.idea/codeStyles
 !.idea/copyright
+!.idea/scopes
 
 # gradle
 Mod/build
