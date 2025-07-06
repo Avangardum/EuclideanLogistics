@@ -17,7 +17,11 @@ object EuclideanLogisticsMod {
     val LOGGER: Logger = LogManager.getLogger(ID)
 
     fun doNothing(): Unit {
+        val five: Int = 5
+        if (five == 5) {
 
+        }
+        return Unit;
     }
 
     init {
