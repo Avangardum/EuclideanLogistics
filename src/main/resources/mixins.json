@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "net.avangardum.euclideanlogistics.mixins",
+  "mixins": [
+    "MixinBlock",
+    "MixinGui",
+    "MixinInventory",
+    "MixinMinecraft"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
