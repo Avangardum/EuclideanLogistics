@@ -14,7 +14,11 @@ import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 object EuclideanLogisticsMod {
     const val ID = "euclideanlogistics"
 
-    val LOGGER: Logger = LogManager.getLogger(ID)
+    val LOGGER: Logger = LogManager.getLogger(ID);
+
+    public fun doNothing(): Unit {
+        ;
+    }
 
     init {
         ModBlocks.REGISTRY.register(MOD_BUS)
