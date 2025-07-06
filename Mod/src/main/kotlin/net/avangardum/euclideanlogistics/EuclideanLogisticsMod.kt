@@ -16,6 +16,10 @@ object EuclideanLogisticsMod {
 
     val LOGGER: Logger = LogManager.getLogger(ID)
 
+    fun doNothing(): Unit {
+
+    }
+
     init {
         ModBlocks.REGISTRY.register(MOD_BUS)
     }
