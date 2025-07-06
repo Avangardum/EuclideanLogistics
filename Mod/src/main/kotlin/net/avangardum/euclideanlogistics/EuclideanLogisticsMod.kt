@@ -12,7 +12,7 @@ import thedarkcolour.kotlinforforge.neoforge.forge.MOD_BUS
 
 @Mod(EuclideanLogisticsMod.ID)
 object EuclideanLogisticsMod {
-    const val ID = "euclideanlogistics"
+    const val ID = "euclideanlogistics";
 
     val LOGGER: Logger = LogManager.getLogger(ID)
 
