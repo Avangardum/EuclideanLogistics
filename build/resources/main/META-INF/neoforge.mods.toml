@@ -1,0 +1,28 @@
+# Make sure this is set to "kotlinforforge"
+modLoader="kotlinforforge"
+# Make sure this is set to the appropriate version range
+loaderVersion="[5.3,)"
+license='GNU AGPL v3'
+
+[[mods]]
+modId="euclideanlogistics"
+version="0.1"
+displayName="Euclidean Logistics Main"
+credits="Thanks to thedarkcolour and all the contributors for making Kotlin for Forge"
+authors="Avangardum"
+description='''The main mod of the Euclidean Logistics modpack.'''
+[[dependencies.euclideanlogistics]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.euclideanlogistics]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+config="mixins.json"
